@@ -2,14 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- Mengatur karakter encoding menjadi UTF-8 untuk mendukung berbagai karakter internasional -->
-
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <!-- Menyesuaikan viewport agar mendukung desain responsif pada berbagai perangkat -->
-
     <title>Admin Dashboard</title>
-    <!-- Judul halaman -->
-
     <!-- Montserrat Font -->
     <link
       rel="icon"
@@ -17,536 +11,407 @@
       sizes="120x120"
       href="../images/icons8-5-96.png"
     />
-    <!-- Ikon favicon untuk halaman -->
-
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- Mengimpor font Montserrat dari Google Fonts -->
-
     <!-- Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
     />
-    <!-- Mengimpor Material Icons untuk ikon gaya Google -->
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- Menghubungkan file CSS kustom untuk desain halaman -->
-
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
-    <!-- Mengimpor ikon Font Awesome untuk tambahan ikon -->
-
     <!-- data table css -->
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
     />
-    <!-- Mengimpor gaya untuk tabel data -->
   </head>
-
   <body data-theme="light">
-    <!-- Menandai body dengan atribut data-theme untuk mendukung pengubahan tema -->
-
     <div class="grid-container">
-      <!-- Container grid untuk mengatur tata letak halaman -->
-
       <!-- Header -->
       <header class="header">
-        <!-- Bagian header dashboard -->
         <div class="menu-icon" onclick="openSidebar()">
-          <!-- Ikon menu untuk membuka sidebar -->
           <span class="material-icons-outlined">menu</span>
         </div>
         <div class="main-title">
-          <!-- Judul utama dashboard -->
           <h2>BIKE SALES DASHBOARD</h2>
         </div>
         <div class="toggle-icon" onclick="toggleTheme()">
-          <!-- Ikon toggle untuk mengubah tema (misalnya light/dark mode) -->
           <i class="fas fa-moon" id="theme-icon"></i>
         </div>
       </header>
       <!-- End Header -->
-
       <!-- Sidebar -->
       <aside id="sidebar" class="sidebar">
-        <!-- Bagian sidebar -->
         <div class="sidebar-title">
-          <!-- Judul sidebar dengan logo dan nama tim -->
           <div class="sidebar-brand">
             <img src="images/l-spdh.png" alt="logo" class="bold-image" />
-            <!-- Logo tim -->
             Team 5
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()"
             >close</span
           >
-          <!-- Ikon untuk menutup sidebar -->
         </div>
-
         <ul class="sidebar-list">
-          <!-- Daftar menu pada sidebar -->
           <li class="sidebar-list-item">
             <a href="#" target="_blank">
-              <!-- Link ke Dashboard -->
               <span class="material-icons-outlined">dashboard</span>
               Dashboard
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="https://www.kaggle.com/code/sadiqshah/bike-store-sales-in-europe/input " target="_blank">
-              <!-- Link ke Dataset -->
+            <a href="#" target="_blank">
               <span class="material-icons-outlined">poll</span>
               Dataset
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="index.html" target="_blank">
-              <!-- Link untuk keluar -->
+            <a href="#" target="_blank">
               <span class="material-icons-outlined">settings</span>
-              Home
+              Exit
             </a>
           </li>
         </ul>
       </aside>
-
       <!-- End Sidebar -->
       <!-- Main -->
       <main class="main-container">
-        <!-- Elemen utama yang membungkus seluruh konten filtering -->
-      
         <div class="filtering-container">
-          <!-- Container utama untuk semua filter -->
-      
-          <!-- Filter berdasarkan Tahun -->
           <div class="multiselect">
-            <!-- Kontainer untuk dropdown multi-select Tahun -->
             <div class="selectBox" id="selectBoxYear">
-              <!-- Kotak dropdown untuk memilih tahun -->
               <select>
                 <option>Select Year</option>
-                <!-- Opsi default untuk dropdown -->
               </select>
               <div class="overSelect"></div>
-              <!-- Elemen untuk menangkap klik pada dropdown -->
             </div>
             <div id="checkboxesYear">
-              <!-- Kontainer untuk daftar checkbox Tahun -->
-              <label for="2015">
-                <input type="checkbox" id="2015" value="2015" />2015
-              </label>
-              <!-- Checkbox untuk tahun 2015 -->
-              <label for="2016">
-                <input type="checkbox" id="2016" value="2016" />2016
-              </label>
-              <!-- Checkbox untuk tahun 2016 -->
+              <label for="2015"
+                ><input type="checkbox" id="2015" value="2015" />2015</label
+              >
+              <label for="2016"
+                ><input type="checkbox" id="2016" value="2016" />2016</label
+              >
             </div>
           </div>
-          <!-- Akhir filter Tahun -->
-      
-          <!-- Filter berdasarkan Negara -->
           <div class="multiselect">
-            <!-- Kontainer untuk dropdown multi-select Negara -->
             <div class="selectBox" id="selectBoxCountry">
-              <!-- Kotak dropdown untuk memilih negara -->
               <select>
                 <option>Select Country</option>
-                <!-- Opsi default untuk dropdown -->
               </select>
               <div class="overSelect"></div>
-              <!-- Elemen untuk menangkap klik pada dropdown -->
             </div>
             <div id="checkboxesCountry">
-              <!-- Kontainer untuk daftar checkbox Negara -->
-              <label for="Australia">
-                <input type="checkbox" id="Australia" value="Australia" />Australia
-              </label>
-              <label for="Canada">
-                <input type="checkbox" id="Canada" value="Canada" />Canada
-              </label>
-              <label for="France">
-                <input type="checkbox" id="France" value="France" />France
-              </label>
-              <label for="Germany">
-                <input type="checkbox" id="Germany" value="Germany" />Germany
-              </label>
-              <label for="United Kingdom">
-                <input
+              <label for="Australia"
+                ><input
+                  type="checkbox"
+                  id="Australia"
+                  value="Australia"
+                />Australia</label
+              >
+              <label for="Canada"
+                ><input
+                  type="checkbox"
+                  id="Canada"
+                  value="Canada"
+                />Canada</label
+              >
+              <label for="France"
+                ><input
+                  type="checkbox"
+                  id="France"
+                  value="France"
+                />France</label
+              >
+              <label for="Germany"
+                ><input
+                  type="checkbox"
+                  id="Germany"
+                  value="Germany"
+                />Germany</label
+              >
+              <label for="United Kingdom"
+                ><input
                   type="checkbox"
                   id="United Kingdom"
                   value="United Kingdom"
-                />United Kingdom
-              </label>
-              <label for="United States">
-                <input
+                />United Kingdom</label
+              >
+              <label for="United States"
+                ><input
                   type="checkbox"
                   id="United States"
                   value="United States"
-                />United States
-              </label>
+                />United States</label
+              >
             </div>
           </div>
-          <!-- Akhir filter Negara -->
-      
-          <!-- Filter berdasarkan Kelompok Usia -->
           <div class="multiselect">
-            <!-- Kontainer untuk dropdown multi-select Kelompok Usia -->
             <div class="selectBox" id="selectBoxAgeGroup">
-              <!-- Kotak dropdown untuk memilih kelompok usia -->
               <select>
                 <option>Select Age Group</option>
-                <!-- Opsi default untuk dropdown -->
               </select>
               <div class="overSelect"></div>
-              <!-- Elemen untuk menangkap klik pada dropdown -->
             </div>
             <div id="checkboxesAgeGroup">
-              <!-- Kontainer untuk daftar checkbox Kelompok Usia -->
-              <label for="Youth (<25)">
-                <input type="checkbox" id="Youth (<25)" value="Youth (<25)" />Youth
-                (<25)
-              </label>
-              <label for="Young Adults (25-34)">
-                <input
+              <label for="Youth (<25)"
+                ><input
+                  type="checkbox"
+                  id="Youth (<25)"
+                  value="Youth (<25)"
+                />Youth (<25)</label
+              >
+              <label for="Young Adults (25-34)"
+                ><input
                   type="checkbox"
                   id="Young Adults (25-34)"
                   value="Young Adults (25-34)"
-                />Young Adults (25-34)
-              </label>
-              <label for="Adults (35-64)">
-                <input
+                />Young Adults (25-34)</label
+              >
+              <label for="Adults (35-64)"
+                ><input
                   type="checkbox"
                   id="Adults (35-64)"
                   value="Adults (35-64)"
-                />Adults (35-64)
-              </label>
-              <label for="Seniors (64+)">
-                <input
+                />Adults (35-64)</label
+              >
+              <label for="Seniors (64+)"
+                ><input
                   type="checkbox"
                   id="Seniors (64+)"
                   value="Seniors (64+)"
-                />Seniors (64+)
-              </label>
+                />Seniors (64+)</label
+              >
             </div>
           </div>
-          <!-- Akhir filter Kelompok Usia -->
-      
-          <!-- Filter berdasarkan Kategori Produk -->
           <div class="multiselect">
-            <!-- Kontainer untuk dropdown multi-select Kategori Produk -->
             <div class="selectBox" id="selectBoxProductCategory">
-              <!-- Kotak dropdown untuk memilih kategori produk -->
               <select>
                 <option>Select Product Category</option>
-                <!-- Opsi default untuk dropdown -->
               </select>
               <div class="overSelect"></div>
-              <!-- Elemen untuk menangkap klik pada dropdown -->
             </div>
             <div id="checkboxesProductCategory">
-              <!-- Kontainer untuk daftar checkbox Kategori Produk -->
-              <label for="Accessories">
-                <input
+              <label for="Accessories"
+                ><input
                   type="checkbox"
                   id="Accessories"
                   value="Accessories"
-                />Accessories
-              </label>
-              <label for="Bikes">
-                <input type="checkbox" id="Bikes" value="Bikes" />Bikes
-              </label>
-              <label for="Clothing">
-                <input
+                />Accessories</label
+              >
+              <label for="Bikes"
+                ><input type="checkbox" id="Bikes" value="Bikes" />Bikes</label
+              >
+              <label for="Clothing"
+                ><input
                   type="checkbox"
                   id="Clothing"
                   value="Clothing"
-                />Clothing
-              </label>
+                />Clothing</label
+              >
             </div>
           </div>
-          <!-- Akhir filter Kategori Produk -->
         </div>
-      </main>
-      
-      <div class="main-cards">
-        <!-- Container utama untuk semua card -->
-      
-        <div class="cards-one">
-          <!-- Seksi untuk card utama: Revenue, Profit, dan Item Sold -->
-      
-          <!-- Card Revenue -->
-          <div class="box-one">
-            <div class="main-one-title">
-              <!-- Judul dan angka utama untuk Revenue -->
-              <div class="main-title-number">
-                <div class="box-title">Revenue</div>
-                <div class="main-title-number" id="revenue"></div>
-                <!-- Elemen untuk menampilkan data revenue -->
+        <div class="main-cards">
+          <div class="cards-one">
+            <div class="box-one">
+              <div class="main-one-title">
+                <div class="main-title-number">
+                  <div class="box-title">Revenue</div>
+                  <div class="main-title-number" id="revenue"></div>
+                </div>
+                <div class="main-title-icon">
+                  <i class="fa-solid fa-sack-dollar"></i>
+                </div>
               </div>
-              <div class="main-title-icon">
-                <!-- Ikon untuk revenue -->
-                <i class="fa-solid fa-sack-dollar"></i>
+            </div>
+            <div class="box-one">
+              <div class="main-one-title">
+                <div class="main-title-number">
+                  <div class="box-title">Profit</div>
+                  <div class="main-title-number" id="profit"></div>
+                </div>
+                <div class="main-title-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box-one">
+              <div class="main-one-title">
+                <div class="main-title-number">
+                  <div class="box-title">Item Sold</div>
+                  <div class="main-title-number" id="itemSold"></div>
+                </div>
+                <div class="main-title-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Akhir Card Revenue -->
-      
-          <!-- Card Profit -->
-          <div class="box-one">
-            <div class="main-one-title">
-              <!-- Judul dan angka utama untuk Profit -->
-              <div class="main-title-number">
-                <div class="box-title">Profit</div>
-                <div class="main-title-number" id="profit"></div>
-                <!-- Elemen untuk menampilkan data profit -->
+          <div class="cards-two">
+            <div class="box-two-bar">
+              <div class="box-title-two">
+                Revenue by Product Category and Country
               </div>
-              <div class="main-title-icon">
-                <!-- Ikon untuk profit -->
-                <i class="fas fa-chart-line"></i>
+              <canvas id="salesChart"></canvas>
+              <div id="bar-grub"></div>
+              <div class="button-bargrup">
+                <button class="insight-button-bargrup">Insight</button>
               </div>
-            </div>
-          </div>
-          <!-- Akhir Card Profit -->
-      
-          <!-- Card Item Sold -->
-          <div class="box-one">
-            <div class="main-one-title">
-              <!-- Judul dan angka utama untuk Item Sold -->
-              <div class="main-title-number">
-                <div class="box-title">Item Sold</div>
-                <div class="main-title-number" id="itemSold"></div>
-                <!-- Elemen untuk menampilkan data item sold -->
-              </div>
-              <div class="main-title-icon">
-                <!-- Ikon untuk item sold -->
-                <i class="fa-solid fa-cart-shopping"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Akhir Card Item Sold -->
-      
-        </div>
-        <!-- Akhir cards-one -->
-      
-        <div class="cards-two">
-          <!-- Seksi untuk grafik bar: Revenue by Product Category and Country -->
-          <div class="box-two-bar">
-            <div class="box-title-two">
-              Revenue by Product Category and Country
-              <!-- Judul grafik -->
-            </div>
-            <canvas id="salesChart"></canvas>
-            <!-- Grafik bar -->
-            <div id="bar-grub"></div>
-            <div class="button-bargrup">
-              <button class="insight-button-bargrup">Insight</button>
-              <!-- Tombol untuk menampilkan insight -->
-            </div>
-            <div class="text-area-bargrup">
-              <!-- Penjelasan insight terkait grafik -->
-              <strong
+              <div class="text-area-bargrup">
+                <strong
                 >Chart di atas menunjukkan perbedaan revenue berdasarkan
                 product category di negara-negara Eropa.</strong
-              >
-              <br />
-              <strong>• Revenue terbesar</strong> berasal dari product category
-              <strong>sepeda (bikes)</strong> di 
-              <strong>Australia</strong> dengan total revenue sebesar
-              <strong>5.805.057</strong>, sedangkan  
-              <strong>revenue terkecil</strong> berasal dari product category 
-              <strong>pakaian (clothing)</strong> di
-              <strong>Jerman</strong> dengan total revenue sebesar
-              <strong>308.214.</strong>
-              <br />
-              <strong>•</strong> Tren
-              <strong>positif penjualan sepeda</strong> di
-              <strong>Australia</strong> menunjukkan peluang untuk
-              <strong>ekspansi</strong> bagi perusahaan di negara tersebut.
-              <br />
-              <strong>•</strong> Jika penjualan product category sepeda (bikes) di
-              <strong>Australia meningkat</strong> maka berpotensi
-              <strong>meningkatkan pendapatan</strong> secara keseluruhan, hal
-              ini disebabkan karena
-              <strong>harga jual sepeda yang lebih tinggi</strong> 
-              dibandingkan product category lainnya.
-            </div>
-          </div>
-        </div>
-        <!-- Akhir cards-two -->
-      
-        <div class="cards-three">
-          <!-- Seksi untuk grafik pie: Age Group Distribution by Revenue -->
-          <div class="box-three">
-            <p>Age Group Distribution by Revenue</p>
-            <!-- Judul grafik -->
-            <div class="box-pie-chart" id="pie-chart"></div>
-            <!-- Grafik pie -->
-            <div>
-              <div class="button-piechart">
-                <button
-                  id="infopiechart"
-                  onclick="showHideComposition(event)"
                 >
-                  Insight
-                </button>
-                <!-- Tombol untuk menampilkan insight -->
+                <br />
+                <strong>• Revenue terbesar</strong> berasal dari product category
+                <strong>sepeda (bikes)</strong> di 
+                <strong>Australia</strong> dengan total revenue sebesar
+                <strong>5.805.057</strong>, sedangkan  
+                <strong>revenue terkecil</strong> berasal dari product category 
+                <strong>pakaian (clothing)</strong> di
+                <strong>Jerman</strong> dengan total revenue sebesar
+                <strong>308.214.</strong>
+                <br />
+                <strong>•</strong> Tren
+                <strong>positif penjualan sepeda</strong> di
+                <strong>Australia</strong> menunjukkan peluang untuk
+                <strong>ekspansi</strong> bagi perusahaan di negara tersebut.
+                <br />
+                <strong>•</strong> Jika penjualan product category sepeda (bikes) di
+                <strong>Australia meningkat</strong> maka berpotensi
+                <strong>meningkatkan pendapatan</strong> secara keseluruhan, hal
+                ini disebabkan karena
+                <strong>harga jual sepeda yang lebih tinggi</strong> 
+                dibandingkan product category lainnya.
               </div>
-              <div id="insightChart" class="insightpiechartbox"></div>
-              <p id="insightPieChart" class="hidden">
-                <!-- Penjelasan insight untuk grafik pie -->
-                Chart di atas merupakan data penjualan sepeda di Eropa yang
-                menunjukkan bahwa kelompok usia Dewasa (Adults) 35-64
-                mendominasi pasar dengan total penjualan sebesar 49,8%. Angka
-                ini jauh lebih tinggi dibandingkan dengan kelompok usia
-                lainnya, seperti Dewasa Muda (Young Adults) 25-34 dan Remaja
-                (Youth) di bawah 25 tahun.
-              </p>
+            </div>
+          </div>
+          <div class="cards-three">
+            <div class="box-three">
+              <p>Age Group Distribution by Revenue</p>
+              <div class="box-pie-chart" id="pie-chart"></div>
+              <div>
+                <div class="button-piechart">
+                  <button
+                    id="infopiechart"
+                    onclick="showHideComposition(event)"
+                  >
+                    Insight
+                  </button>
+                </div>
+                <div id="insightChart" class="insightpiechartbox"></div>
+                <p id="insightPieChart" class="hidden">
+                  Chart di atas merupakan data penjualan sepeda di Eropa yang
+                  menunjukkan bahwa kelompok usia Dewasa (Adults) 35-64
+                  mendominasi pasar dengan total penjualan sebesar 49,8%. Angka
+                  ini jauh lebih tinggi dibandingkan dengan kelompok usia
+                  lainnya, seperti Dewasa Muda (Young Adults) 25-34 dan Remaja
+                  (Youth) di bawah 25 tahun.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Akhir cards-three -->
-      
-      </div>
-      <!-- Akhir main-cards -->
-      
-      <div class="main-line">
-        <!-- Seksi untuk grafik line dan tabel -->
-        
-        <div class="cards-line-one">
-          <!-- Grafik distribusi berdasarkan negara -->
-          <div class="box-line-one">
-            <div class="box-line-title">
-              Distribution by Country and Revenue
-              <!-- Judul grafik -->
-            </div>
-            <canvas
-              id="distributionChart"
-              width="600px"
-              height="400px"
-            ></canvas>
-            <!-- Grafik line -->
-            <button class="insight-button-bar-line">Insight</button>
-            <!-- Tombol untuk menampilkan insight -->
-            <div class="text-area-hover">
-              <!-- Penjelasan insight terkait grafik line -->
-              <strong
-                >Chart di atas menunjukkan perbedaan pendistribusian product
-                bikes berdasarkan Customer Gender di Negara-negara
-                Eropa</strong
-              >
-              <br />
-              <strong>•</strong> Pada tahun 2015-2016 customer dengan
-              <strong>Gender Female</strong> di
-              <strong>Australia dan Germany</strong> mengalami
-              <strong>penurunan yang signifikan</strong>
-              <br />
-              <strong>•</strong> Pada tahun 2015-2016 customer dengan
-              <strong>Gender Male</strong> di
-              <strong>Canada dan Germany</strong> mengalami
-              <strong>peningkatan yang signifikan.</strong>
-              <br />
-              <strong>•</strong> Secara <strong>Keseluruhan</strong>, terjadi
-              <strong>peningkatan jumlah Female</strong> dari tahun 2015-2016
-              <strong>sementara</strong> customer dengan
-              <strong>Gender Male</strong> mengalami penurunan. Hal ini dapat
-              menunjukan <strong>pergeseran demografis</strong> atau
-              <strong>tren</strong> dalam
-              <strong
-                >penggunaan produk atau layanan tertentu di berbagai
-                negara</strong
-              >
-              <br />
-              <strong>•</strong> <strong>United States</strong> menjadi
-              <strong>Negara</strong> yang memiliki
-              <strong>potensi pasar</strong> yang
-              <strong>besar</strong> karena <strong>memiliki</strong> jumlah
-              <strong>customer female dan male</strong> terbesar dari tahun
-              2015-2016.
+        <div class="main-line">
+          <div class="cards-line-one">
+            <div class="box-line-one">
+              <div class="box-line-title">
+                Distribution by Country and Revenue
+              </div>
+              <canvas
+                id="distributionChart"
+                width="600px"
+                height="400px"
+              ></canvas>
+              <button class="insight-button-bar-line">Insight</button>
+              <div class="text-area-hover">
+                <strong
+                  >Chart di atas menunjukkan perbedaan pendistribusian product
+                  bikes berdasarkan Customer Gender di Negara-negara
+                  Eropa</strong
+                >
+                <br />
+                <strong>•</strong> Pada tahun 2015-2016 customer dengan
+                <strong>Gender Female</strong> di
+                <strong>Australia dan Germany</strong> mengalami
+                <strong>penurunan yang signifikan</strong>
+                <br />
+                <strong>•</strong> Pada tahun 2015-2016 customer dengan
+                <strong>Gender Male</strong> di
+                <strong>Canada dan Germany</strong> mengalami
+                <strong>peningkatan yang signifikan.</strong>
+                <br />
+                <strong>•</strong> Secara <strong>Keseluruhan</strong>, terjadi
+                <strong>peningkatan jumlah Female</strong> dari tahun 2015-2016
+                <strong>sementara</strong> customer dengan
+                <strong>Gender Male</strong> mengalami penurunan. Hal ini dapat
+                menunjukan <strong>pergeseran demografis</strong> atau
+                <strong>tren</strong> dalam
+                <strong
+                  >penggunaan produk atau layanan tertentu di berbagai
+                  negara</strong
+                >
+                <br />
+                <strong>•</strong> <strong>United States</strong> menjadi
+                <strong>Negara</strong> yang memiliki
+                <strong>potensi pasar</strong> yang
+                <strong>besar</strong> karena <strong>memiliki</strong> jumlah
+                <strong>customer female dan male</strong> terbesar dari tahun
+                2015-2016.
+                <br />
+                <strong>•</strong> Terdapat <strong>perbedaan</strong> yang
+                signifikan dalam distribusi berdasarkan
+                <strong>Gender</strong> di antara negara-negara
+                <strong>Eropa</strong> ini, menyoroti
+                <strong>kompleksitas</strong> dan
+                <strong>keragaman pasar global</strong> dalam hal
+                <strong>preferensi konsumen berdasarkan Gender</strong>.
+              </div>
             </div>
           </div>
+          <div class="table-container">
+            <h1>Top Performance Product</h1>
+            <table id="data-table" class="display" width="100%"></table>
+            <div class="table-chart" id="data-table"></div>
+            <div class="table-chart" id="data-table"></div>
+          </div>
         </div>
-        <!-- Akhir cards-line-one -->
-      
-        <!-- Tabel data -->
-        <div class="table-container">
-          <h1>Top Performance Product</h1>
-          <!-- Judul tabel -->
-          <table id="data-table" class="display" width="100%"></table>
-          <!-- Tabel untuk menampilkan data -->
-        </div>
-      </div>
-      <!-- Akhir main-line -->
-      
       </main>
       <!-- End Main -->
     </div>
-    <!-- Akhir dari kontainer utama -->
-    
     <!-- Scripts -->
-    <!-- Menyisipkan skrip eksternal dan kustom untuk mendukung fitur halaman -->
-    
-    <!-- jQuery -->
+    <!-- ApexCharts -->
+    <!--data table script-->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-    <!-- Library jQuery untuk mempermudah manipulasi DOM dan event handling -->
-    
-    <!-- DataTables -->
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-    <!-- Library DataTables untuk pembuatan tabel interaktif -->
-    
-    <!-- ApexCharts -->
+    <!--Apexcharts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
-    <!-- Library ApexCharts untuk pembuatan grafik berbasis SVG -->
-    
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Library Chart.js untuk membuat berbagai jenis grafik -->
-    
-    <!-- Chart.js Plugin for Data Labels -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <!-- Plugin Chart.js untuk menampilkan label data pada grafik -->
-    
-    <!-- Google Charts -->
     <script
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
-    <!-- Library Google Charts untuk membuat grafik berbasis Google Chart Tools -->
-    
-    <!-- Custom JavaScript -->
+    <script type="text/javascript"></script>
+
+    <!-- Custom JS -->
     <script src="js/table.js"></script>
-    <!-- Skrip kustom untuk fitur tabel interaktif -->
-    
     <script src="js/filtering.js"></script>
-    <!-- Skrip kustom untuk pengelolaan filter -->
-    
     <script src="js/scripts.js"></script>
-    <!-- Skrip utama untuk logika halaman -->
-    
     <script src="js/bar-grup.js"></script>
-    <!-- Skrip kustom untuk grafik bar grup -->
-    
     <script src="js/pie-charts.js"></script>
-    <!-- Skrip kustom untuk grafik pie -->
-    
     <script src="js/bar-line-y.js"></script>
-    <!-- Skrip kustom untuk grafik bar dan line -->
-    
     <script src="js/table.js"></script>
-    <!-- Skrip kustom tambahan untuk pengelolaan tabel -->
-    
     <script src="js/scoreCard.js"></script>
-    <!-- Skrip kustom untuk elemen score card (Revenue, Profit, Item Sold) -->
-    
-    </body>
-    </html>
-    
+  </body>
+</html>
