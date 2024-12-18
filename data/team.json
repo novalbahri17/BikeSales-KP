@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Beatrice Patricia Pandana",
+        "role": "Mentor",
+        "desc": "RevoU ",
+        "prodi": "Data Analysis ",
+        "img": "images/beatrice.png",
+        "linkedin": "https://www.linkedin.com/in/beatrice-patricia-pandana-3063201b3"
+    },
+    {
+        "name": "Michael",
+        "role": "Mentor",
+        "desc": "RevoU ",
+        "prodi": "Front-End",
+        "img": "images/michael.jpeg",
+        "linkedin": "https://www.linkedin.com/in/michael-felix-atmadja"
+    },
+    {
+        "name": "Wahyu Enggar Jati",
+        "role": "Data Analysis",
+        "desc": "Universitas 17 Agustus 1945 Surabaya",
+        "prodi": "Teknik Informatika",
+        "img": "images/wahyu.jpg",
+        "linkedin": "https://www.linkedin.com/in/"
+    },
+    {
+        "name": "Syahreza Daffa R",
+        "role": "UI & UX",
+        "desc": "Universitas 17 Agustus 1945 Surabaya",
+        "prodi": "Teknik Informatika",
+        "img": "images/dafa.jpg",
+        "linkedin": "https://www.linkedin.com/in/"
+    },
+    {
+        "name": "Nouval B Saputra",
+        "role": "Front-End",
+        "desc": "Universitas 17 Agustus 1945 Surabaya",
+        "prodi": "Teknik Informatika",
+        "img": "images/noval.jpg",
+        "linkedin": "https://www.linkedin.com/nouval-b-saputra-2b019b258/"
+    }
+]
