@@ -265,7 +265,7 @@ onload = function () {
   <div class="bounce2"></div>
   <div class="bounce3"></div>
 </div>
-<h2 class="loading-text3">Presented by Team 6 Section Jayapura</h2>
+<h2 class="loading-text3">Presented by Revou</h2>
 `;
 
   id.appendChild(loading);
