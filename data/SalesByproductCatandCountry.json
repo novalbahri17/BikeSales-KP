@@ -1,0 +1,20 @@
+[
+  {"Country": "United States", "Product_Category": "Bikes", "Revenue": 5672522},
+  {"Country": "United States", "Product_Category": "Accessories", "Revenue": 2556064},
+  {"Country": "United States", "Product_Category": "Clothing", "Revenue": 1379014},
+  {"Country": "United Kingdom", "Product_Category": "Bikes", "Revenue": 2589744},
+  {"Country": "United Kingdom", "Product_Category": "Accessories", "Revenue": 908502},
+  {"Country": "United Kingdom", "Product_Category": "Clothing", "Revenue": 436231},
+  {"Country": "Germany", "Product_Category": "Bikes", "Revenue": 2249927},
+  {"Country": "Germany", "Product_Category": "Clothing", "Revenue": 308214},
+  {"Country": "Germany", "Product_Category": "Accessories", "Revenue": 743954},
+  {"Country": "France", "Product_Category": "Bikes", "Revenue": 2077801},
+  {"Country": "France", "Product_Category": "Accessories", "Revenue": 668162},
+  {"Country": "France", "Product_Category": "Clothing", "Revenue": 333445},
+  {"Country": "Canada", "Product_Category": "Bikes", "Revenue": 1131340},
+  {"Country": "Canada", "Product_Category": "Clothing", "Revenue": 593206},
+  {"Country": "Canada", "Product_Category": "Accessories", "Revenue": 1101129},
+  {"Country": "Australia", "Product_Category": "Bikes", "Revenue": 5805157},
+  {"Country": "Australia", "Product_Category": "Accessories", "Revenue": 1342553},
+  {"Country": "Australia", "Product_Category": "Clothing", "Revenue": 692268}
+]

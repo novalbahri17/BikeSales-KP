@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Metadata dasar dan resource eksternal untuk halaman web.
+        - charset: Mengatur encoding karakter menjadi UTF-8 (standar universal).
+        - viewport: Agar halaman responsif pada perangkat mobile dan desktop.
+        - og:title, og:type, og:description, og:image: Metadata Open Graph untuk preview halaman web di media sosial.
+        - title: Judul yang tampil di tab browser.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <title>Team 6 - Jayapura</title>
+
+    <!--
+        Favicon: Ikon kecil yang muncul di tab browser.
+        - href: Lokasi file favicon (ikon logo).
+        - type: Jenis file gambar.
+    -->
+    <link rel="shortcut icon" href="images/revou-logo.svg" type="image/x-icon">
+
+    <!--
+        Resource eksternal untuk ikon dan font.
+        - remixicon: Paket ikon dari Remix Icon CDN.
+        - swiper css: CSS untuk swiper slider (plugin untuk tampilan slider).
+        - custom css: File CSS utama untuk styling halaman web.
+        - unicons: Paket ikon tambahan.
+        - animate.css: Library animasi CSS untuk elemen halaman.
+        - AnimeJS: Library JavaScript untuk animasi lanjutan.
+        - Sweet Alert: Library untuk menampilkan popup alert yang interaktif.
+        - Email JS: Library untuk pengiriman email dari halaman web.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/landing_page.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body id="loading-element">
+    <!--
+        Bagian utama halaman web.
+        - id="loading-element": Untuk mengidentifikasi elemen loading jika diperlukan efek preloader.
+        - id="main-content": Container utama konten halaman.
+    -->
+    <div id="main-content">
+
+        <!--
+            Bagian Header dan Navbar.
+            - class="header": Untuk styling elemen header.
+            - id="header": Untuk manipulasi header menggunakan JavaScript.
+        -->
+        <header class="header" id="header">
+            <!--
+                Navigasi Utama
+                - class="navbar container": Container navigasi yang berisi logo, menu, dan tombol buka/tutup.
+            -->
+            <nav class="navbar container">
+
+                <!--
+                    Logo dan link ke bagian home.
+                    - href="#home": Navigasi ke bagian home halaman.
+                    - img: Gambar logo.
+                -->
+                <a href="#home" class="navbar__logo">
+                    <img src="images/revou-logo.svg" alt="logo">
+                    Team 6 Jayapura
+                </a>
+
+                <!--
+                    Menu navigasi utama.
+                    - class="navbar__menu": Container daftar menu navigasi.
+                    - id="navbar-menu": Digunakan untuk manipulasi menggunakan JavaScript.
+                -->
+                <div class="navbar__menu" id="navbar-menu">
+
+                    <!--
+                        Daftar menu navigasi.
+                        - class="navbar__list": Container list menu.
+                        - class="navbar__item" dan "navbar__link": Item dan link navigasi ke bagian tertentu di halaman.
+                    -->
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="#home" class="navbar__link">Intro</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#about" class="navbar__link">About</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#team" class="navbar__link">Team</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="dashboard.html" class="navbar__link">Dashboard</a>
+                        </li>
+                    </ul>
+
+                    <!--
+                        Tombol untuk menutup menu navigasi.
+                        - class="navbar__close": Ikon close untuk menutup menu.
+                        - id="navbar-close": Identifikasi untuk JavaScript.
+                    -->
+                    <div class="navbar__close" id="navbar-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <!--
+                    Tombol untuk membuka menu navigasi.
+                    - class="navbar__open": Ikon menu hamburger untuk membuka menu.
+                    - id="navbar-open": Identifikasi untuk JavaScript.
+                -->
+                <div class="navbar__open" id="navbar-open">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!-- content -->
+        <main class="content" id="content">
+
+            <!-- 1. Section Home -->
+            <!--
+                Bagian utama halaman yang menampilkan informasi awal atau "hero section".
+                - class="home section": Section untuk home dengan kelas utama.
+                - id="home": ID untuk navigasi ke bagian ini.
+                - shape__big dan shape__small: Bentuk dekoratif tambahan.
+            -->
+            <section class="home section" id="home">
+
+                <!-- Elemen dekoratif -->
+                <div class="shape shape__big"></div>
+                <div class="shape shape__small"></div>
+
+                <!-- Container grid untuk konten utama -->
+                <div class="home__container container grid">
+
+                    <!-- Data teks pada home section -->
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Bike Sales Analysis
+                        </h1>
+
+                        <h2 class="home__subtitle">
+                            Unlocking Bike Sales Potential
+                        </h2>
+
+                        <h3 class="home__elec">
+                            <!-- Icon dari Remix Icon -->
+                            <i class="ri-riding-line"></i> 2015 - 2016
+                        </h3>
+                    </div>
+
+                    <!-- Gambar utama di bagian home -->
+                    <img src="images/home.png" alt="" class="home__img">
+
+                    <!-- Tombol navigasi ke bagian Dashboard -->
+                    <div class="home__button">
+                        <a href="dashboard.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Our Dashboard
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Section Overview -->
+            <!--
+                (Belum diimplementasikan)
+                Tempat untuk menambahkan ringkasan atau gambaran umum jika diperlukan di masa depan.
+            -->
+
+            <!-- 3. Section About -->
+            <!--
+                Bagian "About" yang menjelaskan dataset penjualan sepeda.
+                - class="about section": Section berisi deskripsi dataset.
+                - id="about": ID untuk navigasi ke bagian ini.
+            -->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <!-- Gambar pendukung untuk bagian About -->
+                    <div class="about__group">
+                        <img src="images/about.jpg" alt="" class="about__img">
+                    </div>
+                    <!-- Data teks deskripsi dataset -->
+                    <div class="about__data">
+                        <h2 class="section__title about__title ">
+                            Bike Sales Analysis
+                        </h2>
+                        <p class="about__desc" style="text-align: justify;">
+                            <!-- Deskripsi rinci mengenai dataset penjualan sepeda -->
+                            The Bike Sales dataset spans 6 years (2015-2016) and includes data from 8 countries:
+                            Australia, Canada, France, Germany, the United Kingdom, and the United States. It tracks
+                            three sales categories: bikes, bike accessories, and bike-related clothing. Within the bike
+                            category,
+                            there are three types of bikes. The data is segmented by gender (male and female) and age
+                            groups: youth,
+                            young adults, adults, and seniors. This comprehensive dataset allows for detailed analysis
+                            of
+                            sales trends
+                            and demographic preferences across different regions and product categories.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Section Team -->
+            <!--
+                Bagian "Team" yang menampilkan anggota tim dalam bentuk slider.
+                - class="team section": Section berisi anggota tim.
+                - id="team": ID untuk navigasi ke bagian ini.
+                - swiper: Plugin slider untuk menampilkan kartu tim.
+            -->
+            <section class="team section" id="team">
+                <h2 class="section__title team_title">
+                    Meet Our Team
+                </h2>
+                <div class="team__container container swiper">
+                    <div id="swiperWrapper" class="swiper-wrapper">
+                        <!-- Tempat untuk menampilkan kartu tim -->
+                    </div>
+                    <!-- Navigasi pagination slider -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+
+
+            <!-- 6. Section Contact Us -->
+            <!--
+                Bagian "Contact Us" untuk menghubungi tim.
+                - class="contact": Section form kontak.
+                - id="contact": ID untuk navigasi ke bagian ini.
+            -->
+            <section class="contact" id="contact">
+                <div class="contact__container container grid">
+                    <!-- Judul section -->
+                    <h2 class="section__title contact__title">
+                        Contact Us
+                    </h2>
+                    <div class="contact__data">
+                        <!-- Form kontak untuk pengisian data pengguna -->
+                        <form action="" method="post" name="contact-form" class="contact-form"
+                            onsubmit="return validateForm(event)">
+                            <!-- Input untuk nama -->
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Name" id="name" name="Name" required>
+
+                            <!-- Input untuk email -->
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Email" id="email" name="Email" required>
+
+                            <!-- Input untuk nomor telepon dengan validasi pola angka -->
+                            <label for="number">Phone Number</label>
+                            <input type="text" placeholder="Phone Number" id="number" name="Phone Number" required
+                                pattern="^0\d+$">
+
+                            <!-- Textarea untuk pesan pengguna -->
+                            <label for="message">Message</label>
+                            <textarea id="message" cols="30" rows="10" name="Message" required></textarea>
+
+                            <!-- Tombol submit form -->
+                            <button type="submit" class="contact__submit submit-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- footer -->
+        <!--
+            Bagian footer halaman web.
+            - class="footer section": Section untuk footer.
+            - id="footer": ID untuk navigasi ke bagian footer.
+        -->
+        <footer class="footer section" id="footer">
+            <!-- Elemen dekoratif -->
+            <div class="shape shape__big"></div>
+            <div class="shape shape__small"></div>
+
+            <!-- Container utama untuk konten footer -->
+            <div class="footer__container container grid">
+                <!-- Konten pertama: Logo dan deskripsi singkat -->
+                <div class="footer__content">
+                    <!-- Logo footer -->
+                    <a href="#" class="footer__logo">
+                        <i class="ri-bike-fill"></i>Bike Sales Analysis
+                    </a>
+                    <!-- Deskripsi footer -->
+                    <p class="footer__desc">
+                        The bike sales analysis serves a dual purpose: to streamline
+                        product development and enhance sales strategies, as well as
+                        to inform customers about prevailing trends.
+                    </p>
+                </div>
+
+                <!-- Konten kedua: Tautan ke media sosial -->
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        Follow Us
+                    </h3>
+
+                    <!-- Daftar tautan media sosial -->
+                    <ul class="footer__social">
+                        <!-- Tautan ke GitHub -->
+                        <a href="https://github.com/orgs/Kampus-Merdeka-Software-Engineering/teams/section-semarang-team-8/members"
+                            class="footer__social-link" target="_blank">
+                            <i class="ri-github-fill"></i>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hak cipta footer -->
+            <span class="footer__copy anime_footer">
+                &#169; Team 6 Jayapura. All rights reserved
+            </span>
+        </footer>
+    </div>
+
+    <!-- ------------------- SCROLL TOP -------------------- -->
+    <!--
+        Tombol untuk kembali ke bagian atas halaman.
+        - class="scrollup": Styling untuk tombol scroll up.
+        - id="scroll-up": Digunakan untuk manipulasi dengan JavaScript.
+    -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-top-arrow-from-top scrollup__icon"></i>
+    </a>
+
+    <!-- ================== SCRIPT FILES ================== -->
+    <!--
+        File JavaScript eksternal yang digunakan dalam halaman.
+        - team.js: Mengelola bagian team slider.
+        - chart.umd.min.js: Library Chart.js untuk menampilkan grafik.
+        - fillDropdown.js: Skrip untuk mengisi dropdown.
+        - chartX.js: Skrip untuk berbagai grafik.
+        - swiper-bundle.min.js: Skrip untuk slider Swiper.
+        - main.js: Skrip utama untuk halaman ini.
+        - gsheet.js: Skrip untuk integrasi data dari Google Sheet.
+    -->
+    <script src="js/team.js"></script>
+    <script src="js/chart.umd.min.js"></script>
+    <script src="js/fillDropdown.js"></script>
+    <script src="js/chart1.js"></script>
+    <script src="js/chart2.js"></script>
+    <script src="js/chart3.js"></script>
+    <script src="js/chart4.js"></script>
+    <script src="js/chart5.js"></script>
+    <script src="js/chart6.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gsheet.js"></script>
+</body>
+
+</html>

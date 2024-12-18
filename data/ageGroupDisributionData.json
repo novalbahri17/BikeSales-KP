@@ -1,0 +1,20 @@
+{
+    "data": [
+    {
+        "label": "Adults (35-64)",
+        "value": 49.8
+    },
+    {
+        "label": "Young Adults (25-34)",
+        "value": 35.9
+    },
+    {
+        "label": "Youth (<25)",
+        "value": 13.9
+    },
+    {
+        "label": "Seniors (64+)",
+        "value": 0.4
+    }
+    ]
+}

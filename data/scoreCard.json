@@ -1,0 +1,16 @@
+{
+  "cardsone": [
+    {
+      "year": 2015,
+      "revenue": 16335885,
+      "profit": 6148195,
+      "itemSold": 281916
+    },
+    {
+      "year": 2016,
+      "revenue": 14253348,
+      "profit": 5737463,
+      "itemSold": 363136
+    }
+  ]
+}

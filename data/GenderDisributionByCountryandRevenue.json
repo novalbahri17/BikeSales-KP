@@ -1,0 +1,46 @@
+{
+  "2015": {
+    "labels": [
+      "Australia",
+      "Canada",
+      "France",
+      "Germany",
+      "United Kingdom",
+      "United States"
+    ],
+    "datasets": [
+      {
+        "label": "Female",
+        "data": [2492601, 668497, 729940, 767293, 1008376, 2561017],
+        "backgroundColor": "#4DD0E1"
+      },
+      {
+        "label": "Male",
+        "data": [2270051, 755677, 856878, 814118, 983810, 2427627],
+        "backgroundColor": "#00838F"
+      }
+    ]
+  },
+  "2016": {
+    "labels": [
+      "Australia",
+      "Canada",
+      "France",
+      "Germany",
+      "United Kingdom",
+      "United States"
+    ],
+    "datasets": [
+      {
+        "label": "Female",
+        "data": [1353573, 612868, 744923, 839500, 914058, 2116581],
+        "backgroundColor": "#4DD0E1"
+      },
+      {
+        "label": "Male",
+        "data": [1723753, 788633, 747667, 881184, 1028233, 2502375],
+        "backgroundColor": "#00838F"
+      }
+    ]
+  }
+}
